@@ -7,7 +7,7 @@ import { Card } from '../components/ui/card';
 const LinhaAltoPadrao = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
-  const whatsappLink = 'https://wa.me/5511987790294';
+  const whatsappLink = 'https://wa.me/5511987790294?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Linha%20Alto%20Padr%C3%A3o%20e%20gostaria%20de%20um%20or%C3%A7amento.';
 
   useEffect(() => {
     window.scrollTo(0, 0);
