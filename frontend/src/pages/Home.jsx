@@ -275,7 +275,7 @@ const Home = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[#c9a961]" />
-                    <span className="font-['Open_Sans']">Entrega 30% mais rápida</span>
+                    <span className="font-['Open_Sans']">Projeto 3D incluído</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[#c9a961]" />
