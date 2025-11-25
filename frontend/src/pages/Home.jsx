@@ -215,7 +215,7 @@ const Home = () => {
               </div>
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png" 
+                  src="https://images.unsplash.com/photo-1696986324679-dad26261d579?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjB3aW5kb3dzfGVufDB8fHx8MTc2NDAzNjQ3MXww&ixlib=rb-4.1.0&q=85" 
                   alt="Linha Antirruído" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
