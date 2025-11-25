@@ -21,6 +21,7 @@ import {
 import { toast } from 'sonner';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [formData, setFormData] = useState({
