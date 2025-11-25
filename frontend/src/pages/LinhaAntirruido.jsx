@@ -9,6 +9,10 @@ const LinhaAntirruido = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const whatsappLink = 'https://wa.me/5511987790294?text=Olá! Tenho interesse na Linha Antirruído e gostaria de um orçamento.';
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const galleryImages = [
     'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/ul3ziumb_IMG_2807.JPG',
     'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/se9o46tl_IMG_2806.JPG',
