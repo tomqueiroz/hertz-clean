@@ -9,6 +9,10 @@ const LinhaAltoPadrao = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const whatsappLink = 'https://wa.me/5511987790294?text=Olá! Tenho interesse na Linha Alto Padrão e gostaria de um orçamento.';
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const galleryImages = [
     'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/javxqk2a_b9b1cab5-e77c-4b07-929e-7f7ee3fc60b4.jpg',
     'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/n2a9zrpu_C%C3%B3pia%20de%2029f3bede-76a6-4530-a864-c09ec174f821.jpg',
