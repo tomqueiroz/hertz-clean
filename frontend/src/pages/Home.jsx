@@ -508,7 +508,7 @@ const Home = () => {
           </div>
           <div className="relative">
             <img 
-              src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/fcurhutj_2.png" 
+              src="https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY0MDM2NDc3fDA&ixlib=rb-4.1.0&q=85" 
               alt="Área de atendimento" 
               className="w-full rounded-lg shadow-xl"
             />
