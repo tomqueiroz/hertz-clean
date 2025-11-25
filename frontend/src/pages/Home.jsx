@@ -62,46 +62,46 @@ const Home = () => {
   return (
     <div className="relative bg-white text-[#1a1a1a]">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/62rx11fu_1.png" 
+              src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/lgxl1a2j_logo%20hertz%20alta.png" 
               alt="Hertz Esquadrias" 
-              className="h-10 object-contain"
+              className="h-12 object-contain"
             />
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('produtos')} className="text-sm font-medium hover:text-[#c9a961] transition-colors">Produtos</button>
-            <button onClick={() => scrollToSection('projetos')} className="text-sm font-medium hover:text-[#c9a961] transition-colors">Projetos</button>
-            <button onClick={() => scrollToSection('depoimentos')} className="text-sm font-medium hover:text-[#c9a961] transition-colors">Depoimentos</button>
-            <button onClick={() => scrollToSection('contato')} className="text-sm font-medium hover:text-[#c9a961] transition-colors">Contato</button>
+            <button onClick={() => scrollToSection('produtos')} className="text-sm font-medium text-white hover:text-[#c9a961] transition-colors">Produtos</button>
+            <button onClick={() => scrollToSection('projetos')} className="text-sm font-medium text-white hover:text-[#c9a961] transition-colors">Projetos</button>
+            <button onClick={() => scrollToSection('depoimentos')} className="text-sm font-medium text-white hover:text-[#c9a961] transition-colors">Depoimentos</button>
+            <button onClick={() => scrollToSection('contato')} className="text-sm font-medium text-white hover:text-[#c9a961] transition-colors">Contato</button>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href={`tel:11987790294`} className="text-sm font-medium hover:text-[#c9a961] transition-colors">(11) 98779-0294</a>
+            <a href={`tel:11987790294`} className="text-sm font-medium text-white hover:text-[#c9a961] transition-colors">(11) 98779-0294</a>
             <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-[#c9a961] hover:bg-[#b89851] text-white">
               ORÇAMENTO GRÁTIS
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-black border-t border-gray-800">
             <nav className="flex flex-col px-6 py-4 space-y-3">
-              <button onClick={() => scrollToSection('produtos')} className="text-left text-sm font-medium hover:text-[#c9a961]">Produtos</button>
-              <button onClick={() => scrollToSection('projetos')} className="text-left text-sm font-medium hover:text-[#c9a961]">Projetos</button>
-              <button onClick={() => scrollToSection('depoimentos')} className="text-left text-sm font-medium hover:text-[#c9a961]">Depoimentos</button>
-              <button onClick={() => scrollToSection('contato')} className="text-left text-sm font-medium hover:text-[#c9a961]">Contato</button>
-              <a href={`tel:11987790294`} className="text-left text-sm font-medium hover:text-[#c9a961]">(11) 98779-0294</a>
+              <button onClick={() => scrollToSection('produtos')} className="text-left text-sm font-medium text-white hover:text-[#c9a961]">Produtos</button>
+              <button onClick={() => scrollToSection('projetos')} className="text-left text-sm font-medium text-white hover:text-[#c9a961]">Projetos</button>
+              <button onClick={() => scrollToSection('depoimentos')} className="text-left text-sm font-medium text-white hover:text-[#c9a961]">Depoimentos</button>
+              <button onClick={() => scrollToSection('contato')} className="text-left text-sm font-medium text-white hover:text-[#c9a961]">Contato</button>
+              <a href={`tel:11987790294`} className="text-left text-sm font-medium text-white hover:text-[#c9a961]">(11) 98779-0294</a>
             </nav>
           </div>
         )}
