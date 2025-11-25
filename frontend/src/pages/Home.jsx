@@ -508,7 +508,7 @@ const Home = () => {
           </div>
           <div className="relative">
             <img 
-              src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/fcurhutj_2.png" 
+              src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/n2a9zrpu_C%C3%B3pia%20de%2029f3bede-76a6-4530-a864-c09ec174f821.jpg" 
               alt="Área de atendimento" 
               className="w-full rounded-lg shadow-xl"
             />
