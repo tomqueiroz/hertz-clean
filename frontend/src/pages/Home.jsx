@@ -523,12 +523,12 @@ const Home = () => {
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png', title: 'Living Room Moderno', desc: 'Linha Antirruído' },
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/fcurhutj_2.png', title: 'Casa com Piscina', desc: '450m² de silêncio' },
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/zfosv465_4.png', title: 'Ambiente Integrado', desc: 'Alto Padrão' },
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/2tsqp15b_5.png', title: 'Design Sofisticado', desc: 'Portas Internas' },
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/62rx11fu_1.png', title: 'Fachada Contemporânea', desc: 'Projeto Exclusivo' },
-              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png', title: 'Varanda Premium', desc: 'Vista Integrada' }
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/se9o46tl_IMG_2806.JPG', title: 'Ambiente Premium', desc: 'Linha Antirruído' },
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/ul3ziumb_IMG_2807.JPG', title: 'Esquadrias Sob Medida', desc: 'Alto Padrão' },
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/i9pjdwmc_IMG_2808.JPG', title: 'Detalhes Exclusivos', desc: 'Customização Total' },
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/javxqk2a_b9b1cab5-e77c-4b07-929e-7f7ee3fc60b4.jpg', title: 'Design Sofisticado', desc: 'Projeto Especial' },
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/n2a9zrpu_C%C3%B3pia%20de%2029f3bede-76a6-4530-a864-c09ec174f821.jpg', title: 'Arquitetura Moderna', desc: 'Integração Perfeita' },
+              { img: 'https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/se9o46tl_IMG_2806.JPG', title: 'Luxury Living', desc: 'Vista Panorâmica' }
             ].map((project, index) => (
               <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
                 <img 
