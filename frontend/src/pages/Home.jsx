@@ -64,7 +64,7 @@ const Home = () => {
     setMobileMenuOpen(false);
   };
 
-  const whatsappLink = 'https://wa.me/5511987790294';
+  const whatsappLink = 'https://wa.me/5511987790294?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20esquadrias.';
 
   return (
     <div className="relative bg-white text-[#1a1a1a]">
