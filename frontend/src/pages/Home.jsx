@@ -516,30 +516,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Process */}
-      <section id="projetos" className="py-24 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-['Montserrat'] font-bold text-4xl md:text-5xl text-center mb-16">Como Funciona</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { step: '01', title: 'CONTATO', description: 'Agende seu orçamento gratuito por WhatsApp, telefone ou formulário' },
-              { step: '02', title: 'VISITA TÉCNICA', description: 'Especialista visita seu projeto para medição precisa + consultoria' },
-              { step: '03', title: 'PROPOSTA', description: 'Receba orçamento personalizado em até 48 horas' },
-              { step: '04', title: 'PRODUÇÃO', description: 'Fabricação sob medida com acompanhamento em tempo real' },
-              { step: '05', title: 'INSTALAÇÃO', description: 'Equipe especializada instala com prazo garantido' },
-              { step: '06', title: 'PÓS-VENDA', description: 'Suporte contínuo com garantia de 10 anos ativa' }
-            ].map((item, index) => (
-              <Card key={index} className="p-8 text-center hover:shadow-xl transition-shadow">
-                <div className="text-5xl font-['Montserrat'] font-bold text-[#c9a961] mb-4">{item.step}</div>
-                <h3 className="font-['Montserrat'] font-bold text-xl mb-3">{item.title}</h3>
-                <p className="font-['Open_Sans'] text-gray-700 leading-relaxed">{item.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
