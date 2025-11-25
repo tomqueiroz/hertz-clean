@@ -112,7 +112,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/se9o46tl_IMG_2806.JPG')`,
+            backgroundImage: `url('https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
