@@ -147,7 +147,7 @@ const Home = () => {
           </div>
 
           <Button onClick={() => scrollToSection('contato')} size="lg" className="bg-[#c9a961] hover:bg-[#b89851] text-white text-lg px-8 py-6 font-['Montserrat'] font-semibold uppercase">
-            AGENDAR ORÇAMENTO GRATUITO <ArrowRight className="ml-2" />
+            SOLICITE ORÇAMENTO GRATUITO <ArrowRight className="ml-2" />
           </Button>
           <p className="text-white/80 text-sm mt-4">Especialistas disponíveis para consulta imediata</p>
         </div>
