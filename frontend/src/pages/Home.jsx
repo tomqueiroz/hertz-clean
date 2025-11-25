@@ -246,7 +246,7 @@ const Home = () => {
                     <span className="font-['Open_Sans']">Design minimalista</span>
                   </div>
                 </div>
-                <Button className="w-full bg-[#1a1a1a] hover:bg-[#2d2d2d] text-white">
+                <Button onClick={() => navigate('/linha-antirruido')} className="w-full bg-[#1a1a1a] hover:bg-[#2d2d2d] text-white">
                   CONHECER LINHA ANTIRRUÍDO <ArrowRight className="ml-2" size={18} />
                 </Button>
               </div>
