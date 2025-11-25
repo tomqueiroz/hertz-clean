@@ -119,8 +119,8 @@ const Home = () => {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1 className="font-['Montserrat'] font-bold text-white text-5xl md:text-7xl mb-6 tracking-tight leading-tight">
-            SILÊNCIO É O NOVO LUXO
+          <h1 className="font-['Playfair_Display'] font-normal italic text-white text-5xl md:text-7xl mb-6 tracking-normal leading-tight">
+            Silêncio é o novo luxo
           </h1>
           <p className="font-['Montserrat'] font-light text-white text-xl md:text-2xl mb-12 leading-relaxed">
             Agora você também pode ter as esquadrias preferidas <br className="hidden md:block" />dos melhores arquitetos na sua casa
