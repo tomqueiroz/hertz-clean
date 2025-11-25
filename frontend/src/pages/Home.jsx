@@ -523,12 +523,12 @@ const Home = () => {
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: 'https://images.unsplash.com/photo-1696986324679-dad26261d579?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjB3aW5kb3dzfGVufDB8fHx8MTc2NDAzNjQ3MXww&ixlib=rb-4.1.0&q=85', title: 'Living Room Moderno', desc: 'Linha Antirruído' },
-              { img: 'https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY0MDM2NDc3fDA&ixlib=rb-4.1.0&q=85', title: 'Fachada Moderna', desc: '450m² de silêncio' },
-              { img: 'https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY0MDM2NDgzfDA&ixlib=rb-4.1.0&q=85', title: 'Detalhes Arquitetônicos', desc: 'Alto Padrão' },
-              { img: 'https://images.unsplash.com/photo-1662624914003-9bb2095ca7a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB3aW5kb3dzfGVufDB8fHx8MTc2NDAzNjQ3MXww&ixlib=rb-4.1.0&q=85', title: 'Design Sofisticado', desc: 'Ambientes Premium' },
-              { img: 'https://images.unsplash.com/photo-1617326021886-53d6be1d7154?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY0MDM2NDgzfDA&ixlib=rb-4.1.0&q=85', title: 'Espaço Minimalista', desc: 'Projeto Exclusivo' },
-              { img: 'https://images.unsplash.com/photo-1684778522663-be47e3cbbb2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3aW5kb3dzfGVufDB8fHx8MTc2NDAzNjQ3MXww&ixlib=rb-4.1.0&q=85', title: 'Arquitetura Contemporânea', desc: 'Vista Integrada' }
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png', title: 'Living Room Moderno', desc: 'Linha Antirruído' },
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/fcurhutj_2.png', title: 'Casa com Piscina', desc: '450m² de silêncio' },
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/zfosv465_4.png', title: 'Ambiente Integrado', desc: 'Alto Padrão' },
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/2tsqp15b_5.png', title: 'Design Sofisticado', desc: 'Portas Internas' },
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/62rx11fu_1.png', title: 'Fachada Contemporânea', desc: 'Projeto Exclusivo' },
+              { img: 'https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png', title: 'Varanda Premium', desc: 'Vista Integrada' }
             ].map((project, index) => (
               <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
                 <img 
