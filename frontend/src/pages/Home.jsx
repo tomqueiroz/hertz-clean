@@ -399,30 +399,45 @@ const Home = () => {
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[#c9a961] text-sm font-['Montserrat'] uppercase tracking-wider mb-8">CREDENCIAIS & PARCERIAS</p>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-6 items-center justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             <div className="text-center">
               <p className="font-['Montserrat'] font-bold text-2xl text-[#c9a961]">10/10</p>
               <p className="text-sm text-gray-600">Reclame Aqui</p>
             </div>
             <div className="text-center">
               <p className="font-['Montserrat'] font-bold text-2xl text-[#c9a961]">4.9/5.0</p>
-              <p className="text-sm text-gray-600">Google</p>
+              <p className="text-sm text-gray-600">Google (500+ avaliações)</p>
             </div>
-            <div className="text-center">
-              <CheckCircle className="w-8 h-8 text-[#c9a961] mx-auto mb-2" />
-              <p className="text-sm text-gray-600">Associação<br />Brasileira</p>
+            <div className="flex flex-col items-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/dl0azim8_300x250.jpg" 
+                alt="AFEAL - Associação Nacional de Fabricantes de Esquadrias de Alumínio"
+                className="h-20 w-auto object-contain mb-2"
+              />
+              <p className="text-xs text-gray-600 text-center">Membro AFEAL</p>
             </div>
-            <div className="text-center">
-              <CheckCircle className="w-8 h-8 text-[#c9a961] mx-auto mb-2" />
-              <p className="text-sm text-gray-600">ISO 9001<br />Certificado</p>
+            <div className="flex flex-col items-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/iutd6x1q_images.jpeg" 
+                alt="Pro Acústica - Associação Brasileira para a Qualidade Acústica"
+                className="h-20 w-auto object-contain mb-2"
+              />
+              <p className="text-xs text-gray-600 text-center">Certificado Pro Acústica</p>
             </div>
+          </div>
+          
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center max-w-3xl mx-auto">
             <div className="text-center">
               <p className="font-['Montserrat'] font-bold text-2xl text-[#c9a961]">10 Anos</p>
-              <p className="text-sm text-gray-600">Garantia</p>
+              <p className="text-sm text-gray-600">Garantia Estendida</p>
+            </div>
+            <div className="text-center">
+              <p className="font-['Montserrat'] font-bold text-2xl text-[#c9a961]">+500</p>
+              <p className="text-sm text-gray-600">Projetos Entregues</p>
             </div>
             <div className="text-center">
               <CheckCircle className="w-8 h-8 text-[#c9a961] mx-auto mb-2" />
-              <p className="text-sm text-gray-600">100%<br />Nacional</p>
+              <p className="text-sm text-gray-600">100% Nacional</p>
             </div>
           </div>
         </div>
