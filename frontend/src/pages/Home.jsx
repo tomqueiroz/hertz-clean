@@ -329,8 +329,8 @@ const Home = () => {
                 </div>
                 <p className="font-['Open_Sans'] text-gray-300 mb-6 leading-relaxed">"{testimonial.quote}"</p>
                 <div>
-                  <p className="font-['Montserrat'] font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.credential}</p>
+                  <p className="font-['Montserrat'] font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-[#c9a961] text-sm">{testimonial.credential}</p>
                 </div>
               </Card>
             ))}
