@@ -464,7 +464,7 @@ const Home = () => {
             </div>
           </div>
           <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-[#c9a961] hover:bg-[#b89851] text-white text-lg px-10 py-6 font-['Montserrat'] font-semibold uppercase">
-            AGENDAR AGORA E GARANTIR BENEFÍCIO <ArrowRight className="ml-2" />
+            SOLICITAR AGORA E GARANTIR BENEFÍCIO <ArrowRight className="ml-2" />
           </Button>
         </div>
       </section>
