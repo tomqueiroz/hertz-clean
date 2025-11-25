@@ -257,7 +257,7 @@ const Home = () => {
               </div>
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/62rx11fu_1.png" 
+                  src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/javxqk2a_b9b1cab5-e77c-4b07-929e-7f7ee3fc60b4.jpg" 
                   alt="Linha Alto Padrão" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
