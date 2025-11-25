@@ -384,7 +384,7 @@ const Home = () => {
                 </div>
                 <p className="font-['Open_Sans'] text-gray-700 mb-4 leading-relaxed">"{testimonial.text}"</p>
                 <div>
-                  <p className="font-['Montserrat'] font-semibold text-sm">{testimonial.author} | {testimonial.location}</p>
+                  <p className="font-['Montserrat'] font-semibold text-sm text-[#1a1a1a]">{testimonial.author} | {testimonial.location}</p>
                   <p className="text-[#c9a961] text-xs mt-2 flex items-center">
                     <CheckCircle className="w-3 h-3 mr-1" /> Cliente Verificado
                   </p>
