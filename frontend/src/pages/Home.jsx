@@ -191,7 +191,7 @@ const Home = () => {
           </div>
           <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-xl">
             <img 
-              src="https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/zfosv465_4.png" 
+              src="https://customer-assets.emergentagent.com/job_hertz-luxury/artifacts/i9pjdwmc_IMG_2808.JPG" 
               alt="Detalhes de craftmanship" 
               className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
