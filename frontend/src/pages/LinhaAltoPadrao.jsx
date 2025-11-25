@@ -11,6 +11,7 @@ const LinhaAltoPadrao = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'Linha Alto Padrão - Hertz Esquadrias';
   }, []);
 
   const galleryImages = [
