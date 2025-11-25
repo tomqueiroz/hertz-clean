@@ -123,7 +123,7 @@ const Home = () => {
             SILÊNCIO É O NOVO LUXO
           </h1>
           <p className="font-['Montserrat'] font-light text-white text-xl md:text-2xl mb-12 leading-relaxed">
-            Esquadrias sob medida para projetos que <br className="hidden md:block" />exigem excelência absoluta
+            Agora você também pode ter as esquadrias preferidas <br className="hidden md:block" />dos melhores arquitetos na sua casa
           </p>
 
           {/* Feature Badges */}
