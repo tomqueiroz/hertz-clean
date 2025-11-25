@@ -517,7 +517,7 @@ const Home = () => {
       </section>
 
       {/* Gallery */}
-      <section className="py-24 px-6">
+      <section id="projetos" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-['Montserrat'] font-bold text-4xl md:text-5xl text-center mb-16">Nossos Projetos</h2>
           
