@@ -11,6 +11,7 @@ const LinhaAntirruido = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'Linha Antirruído - Hertz Esquadrias';
   }, []);
 
   const galleryImages = [
