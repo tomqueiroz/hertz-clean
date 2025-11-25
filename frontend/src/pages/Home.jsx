@@ -112,7 +112,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1684778522663-be47e3cbbb2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3aW5kb3dzfGVufDB8fHx8MTc2NDAzNjQ3MXww&ixlib=rb-4.1.0&q=85')`,
+            backgroundImage: `url('https://customer-assets.emergentagent.com/job_18d3cc9c-f8dc-404d-97a1-5e61ff6f5a0c/artifacts/r084gtc8_3.png')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
