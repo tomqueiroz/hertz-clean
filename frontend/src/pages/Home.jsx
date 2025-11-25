@@ -599,7 +599,7 @@ const Home = () => {
                 Qual o prazo médio de entrega e instalação?
               </AccordionTrigger>
               <AccordionContent className="font-['Open_Sans'] text-gray-700 leading-relaxed">
-                O prazo varia conforme a complexidade do projeto, mas em média são 30 a 45 dias para produção e 2 a 5 dias para instalação. Projetos da Linha Alto Padrão têm entrega 30% mais rápida.
+                O prazo varia conforme a complexidade do projeto, mas em média são 45 a 60 dias para produção e 2 a 5 dias para instalação. Entre em contato para consultar prazos específicos do seu projeto.
               </AccordionContent>
             </AccordionItem>
 
