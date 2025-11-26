@@ -15,14 +15,6 @@ const Home = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [formData, setFormData] = useState({
-    nome: '',
-    telefone: '',
-    email: '',
-    tipoProjeto: '',
-    prazo: '',
-    mensagem: ''
-  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
