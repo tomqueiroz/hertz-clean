@@ -675,86 +675,96 @@ const Home = () => {
           <div className="bg-white rounded-lg shadow-xl p-8">
             <h3 className="font-['Montserrat'] font-bold text-3xl mb-6 text-center">SOLICITE SEU ORÇAMENTO GRATUITO</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Formulário LeadLovers */}
+            <form action="https://paginas.rocks/capture" method="post" className="space-y-6">
+              <input id="id" name="id" type="hidden" value="770370" />
+              <input id="mid" name="mid" type="hidden" value="770370" />
+              <input id="pid" name="pid" type="hidden" value="22030575" />
+              <input id="list_id" name="list_id" type="hidden" value="770370" />
+              <input id="provider" name="provider" type="hidden" value="leadlovers" />
+              
               <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Nome Completo *</label>
-                <Input 
+                <label htmlFor="name" className="block font-['Montserrat'] font-medium mb-2">Nome Completo *</label>
+                <input 
+                  className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Informe o seu nome" 
+                  type="text"
                   required
-                  value={formData.nome}
-                  onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                  placeholder="Digite seu nome"
-                  className="h-12"
                 />
               </div>
 
               <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Telefone/WhatsApp *</label>
-                <Input 
-                  required
+                <label htmlFor="phone" className="block font-['Montserrat'] font-medium mb-2">Telefone/WhatsApp *</label>
+                <input data-maskWithDDI="true" data-selectedDDI="+55" type="hidden" />
+                <input 
+                  className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="(11) 99999-9999" 
                   type="tel"
-                  value={formData.telefone}
-                  onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                  placeholder="(11) 99999-9999"
-                  className="h-12"
-                />
-              </div>
-
-              <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Email *</label>
-                <Input 
                   required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block font-['Montserrat'] font-medium mb-2">E-mail *</label>
+                <input 
+                  className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="email" 
+                  name="email" 
+                  placeholder="seu@email.com" 
                   type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  placeholder="seu@email.com"
-                  className="h-12"
+                  required
                 />
               </div>
 
               <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Tipo de Projeto *</label>
-                <Select required value={formData.tipoProjeto} onValueChange={(value) => setFormData({...formData, tipoProjeto: value})}>
-                  <SelectTrigger className="h-12">
-                    <SelectValue placeholder="Selecione o tipo" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="residencia">Residência Nova</SelectItem>
-                    <SelectItem value="reforma">Reforma/Retrofit</SelectItem>
-                    <SelectItem value="cobertura">Cobertura/Duplex</SelectItem>
-                    <SelectItem value="comercial">Comercial</SelectItem>
-                    <SelectItem value="outro">Outro</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Quando pretende iniciar?</label>
-                <Select value={formData.prazo} onValueChange={(value) => setFormData({...formData, prazo: value})}>
-                  <SelectTrigger className="h-12">
-                    <SelectValue placeholder="Selecione o prazo" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="imediato">Imediato (até 30 dias)</SelectItem>
-                    <SelectItem value="1-3">1-3 meses</SelectItem>
-                    <SelectItem value="3-6">3-6 meses</SelectItem>
-                    <SelectItem value="planejando">Ainda planejando</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
-                <label className="block font-['Montserrat'] font-medium mb-2">Mensagem (opcional)</label>
-                <Textarea 
-                  value={formData.mensagem}
-                  onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
-                  placeholder="Conte-nos mais sobre seu projeto..."
-                  className="min-h-[120px]"
+                <label htmlFor="city" className="block font-['Montserrat'] font-medium mb-2">Cidade *</label>
+                <input 
+                  className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="city" 
+                  name="city" 
+                  placeholder="Informe a sua cidade" 
+                  type="text"
+                  required
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-[#c9a961] hover:bg-[#b89851] text-white h-14 text-lg font-['Montserrat'] font-semibold uppercase">
-                ENVIAR SOLICITAÇÃO <ArrowRight className="ml-2" />
-              </Button>
+              <div>
+                <label htmlFor="state" className="block font-['Montserrat'] font-medium mb-2">Estado *</label>
+                <input 
+                  className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="state" 
+                  name="state" 
+                  placeholder="Informe seu estado" 
+                  type="text"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block font-['Montserrat'] font-medium mb-2">Mensagem</label>
+                <textarea 
+                  className="form-control form-ll w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
+                  id="message" 
+                  name="message" 
+                  placeholder="Descreva seu projeto para orçamento ou uma mensagem" 
+                  maxLength="500" 
+                  style={{ height: '120px', resize: 'none' }}
+                ></textarea>
+              </div>
+
+              <button 
+                className="w-full bg-[#c9a961] hover:bg-[#b89851] text-white h-14 text-lg font-['Montserrat'] font-semibold uppercase rounded-md transition-colors duration-300 flex items-center justify-center" 
+                type="submit"
+              >
+                SOLICITAR ORÇAMENTO <ArrowRight className="ml-2" />
+              </button>
+
+              <input type="hidden" id="source" name="source" value="" />
+              <img src="https://llimages.com/redirect/redirect.aspx?A=V&p=22030575&m=770370" style={{ display: 'none' }} alt="" />
 
               <p className="text-center text-sm text-gray-500">
                 🔒 Seus dados estão protegidos<br />
