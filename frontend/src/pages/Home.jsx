@@ -29,19 +29,6 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    toast.success('Solicitação enviada! Entraremos em contato em até 2 horas.');
-    setFormData({
-      nome: '',
-      telefone: '',
-      email: '',
-      tipoProjeto: '',
-      prazo: '',
-      mensagem: ''
-    });
-  };
-
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
