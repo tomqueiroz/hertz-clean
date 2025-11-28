@@ -37,6 +37,11 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+# Health check endpoint (without /api prefix for deployment system)
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "hertz-esquadrias"}
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
