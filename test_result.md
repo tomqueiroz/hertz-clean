@@ -101,3 +101,35 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Testar o formulário LeadLovers na página inicial do site Hertz Esquadrias em http://localhost:3000"
+
+frontend:
+  - task: "LeadLovers Form Integration"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "testing"
+          comment: "Initial testing setup - LeadLovers form found in Home.jsx with proper action URL https://paginas.rocks/capture and all required hidden fields. Scripts loaded in index.html including llpixel.js and async-form-capture.js"
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "LeadLovers Form Integration"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "testing"
+      message: "Starting LeadLovers form testing. Found form implementation with proper action URL, hidden fields, and LeadLovers scripts loaded. Will test form submission functionality."
