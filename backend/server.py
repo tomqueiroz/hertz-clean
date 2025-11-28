@@ -42,6 +42,15 @@ class StatusCheckCreate(BaseModel):
 async def health_check():
     return {"status": "healthy", "service": "hertz-esquadrias"}
 
+@app.get("/ready")
+async def readiness_check():
+    try:
+        # Test database connection
+        await db.command("ping")
+        return {"status": "ready", "database": "connected"}
+    except Exception as e:
+        return {"status": "not_ready", "database": "disconnected", "error": str(e)}
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
