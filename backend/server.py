@@ -69,9 +69,13 @@ async def create_status_check(input: StatusCheckCreate):
     return status_obj
 
 @api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
+async def get_status_checks(skip: int = 0, limit: int = 100):
+    # Add pagination with default limit of 100 and max of 1000
+    limit = min(limit, 1000)
+    
     # Exclude MongoDB's _id field from the query results
-    status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
+    # Sort by timestamp descending (newest first)
+    status_checks = await db.status_checks.find({}, {"_id": 0}).sort("timestamp", -1).skip(skip).limit(limit).to_list(limit)
     
     # Convert ISO string timestamps back to datetime objects
     for check in status_checks:
@@ -97,6 +101,18 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+@app.on_event("startup")
+async def startup_db_indexes():
+    """Create database indexes for optimal query performance"""
+    try:
+        # Create index on timestamp for sorting and querying
+        await db.status_checks.create_index([("timestamp", -1)])
+        # Create index on client_name for filtering
+        await db.status_checks.create_index([("client_name", 1)])
+        logger.info("Database indexes created successfully")
+    except Exception as e:
+        logger.warning(f"Error creating indexes (may already exist): {e}")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
