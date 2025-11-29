@@ -125,9 +125,9 @@ def run_all_tests():
     
     results = []
     
-    # Test health endpoints
+    # Test health endpoints (note about routing)
     health_result = test_health_endpoints()
-    results.append(("Health Endpoints", health_result))
+    results.append(("Health Endpoint Routing", health_result))
     
     # Test API root
     root_result = test_api_root()
