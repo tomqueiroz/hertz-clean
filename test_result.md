@@ -119,6 +119,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "Backend API fully functional. Fixed missing DB_NAME env var. All /api/* endpoints working: GET/POST /api/status, GET /api/ root. Health endpoints (/health, /ready) correctly not routed to backend in production (only frontend served). MongoDB integration working with proper data persistence. Status check CRUD operations verified."
+        - working: true
+          agent: "main"
+          comment: "Optimized for deployment: Added pagination to GET /api/status endpoint (skip/limit parameters, default 100, max 1000). Added database indexes on timestamp and client_name fields for optimal query performance. Backend restarted successfully with optimizations."
 
 frontend:
   - task: "Fresh Frontend Setup"
