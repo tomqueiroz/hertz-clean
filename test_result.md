@@ -102,34 +102,62 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Testar o formulário LeadLovers na página inicial do site Hertz Esquadrias em http://localhost:3000"
+user_problem_statement: "Fresh clone from hertz-clean main branch - Fix crashing issues while preserving all integrations"
+
+backend:
+  - task: "Backend Service"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Fresh clone - Backend running successfully with FastAPI and MongoDB"
 
 frontend:
-  - task: "LeadLovers Form Integration"
+  - task: "Fresh Frontend Setup"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/pages/Home.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
     status_history:
-        - working: "NA"
-          agent: "testing"
-          comment: "Initial testing setup - LeadLovers form found in Home.jsx with proper action URL https://paginas.rocks/capture and all required hidden fields. Scripts loaded in index.html including llpixel.js and async-form-capture.js"
+        - working: true
+          agent: "main"
+          comment: "Fresh clone completed - Frontend compiled successfully. All integrations preserved: Google Tag Manager, LeadLovers Pixel, LeadLovers Form, LeadLovers Chat Widget"
+
+  - task: "LeadLovers Form Integration"
+    implemented: true
+    working: true
+    file: "/app/frontend/public/index.html"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "All LeadLovers integrations preserved in fresh clone: Pixel (BB544324B8), Form scripts, Chat Widget (0FF14590-1F55-4802-AB2C-BCF080723CA8)"
 
 metadata:
-  created_by: "testing_agent"
-  version: "1.0"
+  created_by: "main_agent"
+  version: "2.0"
   test_sequence: 1
-  run_ui: true
+  run_ui: false
+  migration_completed: true
+  migration_date: "2024-11-29"
 
 test_plan:
   current_focus:
+    - "Fresh Frontend Setup"
     - "LeadLovers Form Integration"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
 agent_communication:
-    - agent: "testing"
-      message: "Starting LeadLovers form testing. Found form implementation with proper action URL, hidden fields, and LeadLovers scripts loaded. Will test form submission functionality."
+    - agent: "main"
+      message: "Successfully cloned fresh hertz-clean from main branch. All services running. Frontend compiled successfully. All integrations preserved (GTM, LeadLovers Pixel, Form, Chat Widget). Ready for testing."
