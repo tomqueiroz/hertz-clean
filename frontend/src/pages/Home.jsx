@@ -661,6 +661,7 @@ const Home = () => {
                   name="name" 
                   placeholder="Informe o seu nome" 
                   type="text"
+                  autoComplete="name"
                   required
                 />
               </div>
@@ -672,8 +673,9 @@ const Home = () => {
                   className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
                   id="phone" 
                   name="phone" 
-                  placeholder="(11) 99999-9999" 
+                  placeholder="Informe o telefone" 
                   type="tel"
+                  autoComplete="tel"
                   required
                 />
               </div>
@@ -684,8 +686,9 @@ const Home = () => {
                   className="form-control form-ll w-full h-12 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#c9a961]" 
                   id="email" 
                   name="email" 
-                  placeholder="seu@email.com" 
+                  placeholder="Informe o seu email" 
                   type="email"
+                  autoComplete="email"
                   required
                 />
               </div>
@@ -698,6 +701,7 @@ const Home = () => {
                   name="city" 
                   placeholder="Informe a sua cidade" 
                   type="text"
+                  autoComplete="address-level2"
                   required
                 />
               </div>
@@ -710,6 +714,7 @@ const Home = () => {
                   name="state" 
                   placeholder="Informe seu estado" 
                   type="text"
+                  autoComplete="address-level1"
                   required
                 />
               </div>
@@ -722,7 +727,7 @@ const Home = () => {
                   name="message" 
                   placeholder="Descreva seu projeto para orçamento ou uma mensagem" 
                   maxLength="500" 
-                  style={{ height: '120px', resize: 'none' }}
+                  style={{ height: '80px', resize: 'none' }}
                 ></textarea>
               </div>
 
@@ -730,7 +735,7 @@ const Home = () => {
                 className="w-full bg-[#c9a961] hover:bg-[#b89851] text-white h-14 text-lg font-['Montserrat'] font-semibold uppercase rounded-md transition-colors duration-300 flex items-center justify-center" 
                 type="submit"
               >
-                SOLICITAR ORÇAMENTO <ArrowRight className="ml-2" />
+                Solicite Orçamento <ArrowRight className="ml-2" />
               </button>
 
               <input type="hidden" id="source" name="source" value="" />
