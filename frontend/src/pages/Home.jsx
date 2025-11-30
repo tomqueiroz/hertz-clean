@@ -646,12 +646,64 @@ const Home = () => {
             <h3 className="font-['Montserrat'] font-bold text-3xl mb-6 text-center">SOLICITE SEU ORÇAMENTO GRATUITO</h3>
             
             {/* Formulário LeadLovers */}
-            <form action="https://paginas.rocks/capture" method="post" className="space-y-6">
+            <form 
+              id="leadlovers-form" 
+              action="https://paginas.rocks/capture" 
+              method="post" 
+              className="space-y-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.target;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const messageDiv = form.querySelector('#form-message');
+                
+                // Desabilita botão e mostra loading
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<svg className="animate-spin h-5 w-5 mr-2 inline" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> ENVIANDO...';
+                
+                // Coleta dados do formulário
+                const formData = new FormData(form);
+                
+                // Envia para LeadLovers
+                fetch('https://paginas.rocks/capture', {
+                  method: 'POST',
+                  body: formData,
+                  mode: 'no-cors' // LeadLovers não retorna CORS adequado
+                })
+                .then(() => {
+                  // Sucesso (no-cors sempre resolve)
+                  messageDiv.innerHTML = '<div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert"><strong className="font-bold">✅ Enviado com sucesso!</strong><br/><span className="block sm:inline">Obrigado! Entraremos em contato em breve.</span></div>';
+                  messageDiv.classList.remove('hidden');
+                  form.reset(); // Limpa o formulário
+                  
+                  // Reabilita botão
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = 'Solicite Orçamento <svg className="ml-2 inline w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+                  
+                  // Esconde mensagem após 10 segundos
+                  setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                  }, 10000);
+                })
+                .catch((error) => {
+                  // Erro
+                  messageDiv.innerHTML = '<div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong className="font-bold">❌ Erro ao enviar</strong><br/><span className="block sm:inline">Por favor, tente novamente.</span></div>';
+                  messageDiv.classList.remove('hidden');
+                  
+                  // Reabilita botão
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = 'Solicite Orçamento <svg className="ml-2 inline w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+                });
+              }}
+            >
               <input id="id" name="id" type="hidden" value="770370" />
               <input id="mid" name="mid" type="hidden" value="770370" />
               <input id="pid" name="pid" type="hidden" value="22030575" />
               <input id="list_id" name="list_id" type="hidden" value="770370" />
               <input id="provider" name="provider" type="hidden" value="leadlovers" />
+              
+              {/* Mensagem de feedback */}
+              <div id="form-message" className="hidden"></div>
               
               <div>
                 <label htmlFor="name" className="block font-['Montserrat'] font-medium mb-2">Nome Completo *</label>
@@ -732,7 +784,7 @@ const Home = () => {
               </div>
 
               <button 
-                className="w-full bg-[#c9a961] hover:bg-[#b89851] text-white h-14 text-lg font-['Montserrat'] font-semibold uppercase rounded-md transition-colors duration-300 flex items-center justify-center" 
+                className="w-full bg-[#c9a961] hover:bg-[#b89851] text-white h-14 text-lg font-['Montserrat'] font-semibold uppercase rounded-md transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed" 
                 type="submit"
               >
                 Solicite Orçamento <ArrowRight className="ml-2" />
