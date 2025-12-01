@@ -53,26 +53,21 @@
         
         <!-- LeadLovers Chat Widget -->
         <script>
-            window.LL_CHAT_CONFIG = {
-                id: "0FF14590-1F55-4802-AB2C-BCF080723CA8",
-                position: "bottom right",
-                margins: "16 16"
-            };
-            
-            (function() {
-                var chatScript = document.createElement("script");
-                chatScript.src = "https://chatsales-app-oci.leadlovers.com/scripts/widget.js";
-                chatScript.async = true;
-                chatScript.defer = true;
+            const chat = {id:"0FF14590-1F55-4802-AB2C-BCF080723CA8",position:"bottom right", margins: "16 16"};
+            const chatScript = document.createElement("script");
+            chatScript.setAttribute("src", "https://chatsales-app-oci.leadlovers.com/scripts/widget.js");
+            document.addEventListener("DOMContentLoaded", function () {
+                document.body.appendChild(chatScript);
                 
-                if (document.readyState === 'complete') {
-                    document.body.appendChild(chatScript);
-                } else {
-                    window.addEventListener('load', function() {
-                        document.body.appendChild(chatScript);
+                // Force width after chat loads
+                setTimeout(function() {
+                    const chatIframes = document.querySelectorAll('iframe[src*="chatsales"], iframe[src*="leadlovers"], #chatsales-widget-container iframe');
+                    chatIframes.forEach(function(iframe) {
+                        iframe.style.maxWidth = '400px';
+                        iframe.style.width = '400px';
                     });
-                }
-            })();
+                }, 2000);
+            });
         </script>
     </body>
 </html>
